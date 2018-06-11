@@ -1,0 +1,4 @@
+cran_mirror:
+- https://cran.r-project.org
+target_platform:
+- win-64
