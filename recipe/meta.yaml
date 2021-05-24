@@ -1,5 +1,4 @@
-{% set version = '1.0' %}
-
+{% set version = '1.0.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,16 +7,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: tictoc_1.0.tar.gz
   url:
-    - {{ cran_mirror }}/src/contrib/tictoc_1.0.tar.gz
-    - {{ cran_mirror }}/src/contrib/Archive/tictoc/tictoc_1.0.tar.gz
-  sha256: 47da097c1822caa2d8e262381987cfa556ad901131eb96109752742526b2e2fe
+    - {{ cran_mirror }}/src/contrib/tictoc_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/tictoc/tictoc_{{ version }}.tar.gz
+  sha256: a09a1535c417ddf6637bbbda5fca6edab6c7f7b252a64e57e99d4d0748712705
 
 build:
+  number: 0
   noarch: generic
-  number: 1003
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,7 +22,6 @@ build:
 requirements:
   host:
     - r-base
-
   run:
     - r-base
 
@@ -36,8 +32,7 @@ test:
 
 about:
   home: http://github.com/collectivemedia/tictoc
-  license: Apache 2.0
-  license_file: LICENSE
+  license: Apache-2.0
   summary: This package provides the timing functions 'tic' and 'toc' that can be nested. One
     can record all timings while a complex script is running, and examine the values
     later. It is also possible to instrument the timing calls with custom callbacks.
@@ -45,11 +40,10 @@ about:
     'List', implemented as a list, both of which support operations 'push', 'pop', 'first',
     'last' and 'clear'.
   license_family: APACHE
+  license_file:
+    - LICENSE
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - johanneskoester
     - lucapinello
-    - bgruening
