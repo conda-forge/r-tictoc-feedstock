@@ -1,4 +1,4 @@
-{% set version = "1.1" %}
+{% set version = "1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tictoc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tictoc/tictoc_{{ version }}.tar.gz
-  sha256: 120f868ba276bda70c8edef5d6c092586cf73db0fa02eb5459d8f55350fb474d
+  sha256: f05ea4b4142a90b0dc5d10356be3748625ef86bbd0e4399c56455654165ff20c
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
