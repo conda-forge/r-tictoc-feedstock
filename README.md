@@ -1,11 +1,11 @@
-About r-tictoc
-==============
+About r-tictoc-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tictoc-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/collectivemedia/tictoc
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tictoc-feedstock/blob/main/LICENSE.txt)
 
 Summary: This package provides the timing functions 'tic' and 'toc' that can be nested. One can record all timings while a complex script is running, and examine the values later. It is also possible to instrument the timing calls with custom callbacks. In addition, this package provides class 'Stack', implemented as a vector, and class 'List', implemented as a list, both of which support operations 'push', 'pop', 'first', 'last' and 'clear'.
 
